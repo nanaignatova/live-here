@@ -1,0 +1,284 @@
+/*
+ Стили главной страницы
+*/
+
+
+main {
+	background-color: var(--main-color-2);
+}
+
+section#filters {
+	display: none;
+}
+
+section#mobile-filters {
+	background-color: var(--sub-color-1);
+}
+
+section#about {
+	background-color: var(--main-color-3);
+}
+
+.main__content {
+	padding: 20px 0 0 0;
+}
+
+.main__content_info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	font-size: 12px;
+	color: var(--text-color-1);
+}
+
+.main__content_cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.main__content_more {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 160px;
+	height: 30px;
+	font-size: 16px;
+	background-color: var(--sub-color-1);
+	color: #ffffff;
+	border-radius: 10px;
+	margin: 13px auto;
+	cursor: pointer;
+	transition: 0.2s all;
+}
+
+.main__content_more:hover {
+	background-color: #43454d;
+}
+
+.main__about {
+	padding: 25px 0;
+	color: var(--text-color-1);
+}
+
+.main__about_title {
+	font-size: 24px;
+	line-height: 29px;
+	margin-bottom: 10px;
+}
+
+.main__about_description {
+	font-size: 14px;
+	line-height: 17px;
+	margin-bottom: 10px;
+}
+
+.main__about_blocks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	row-gap: 10px;
+}
+
+.about__block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 175px;
+	width: 165px;
+	padding: 13px 15px 12px 15px;
+	font-size: 12px;
+	line-height: 15px;
+	background-color: var(--main-color-1);
+	border-radius: 10px;
+}
+
+.dark__theme .about__block {
+	background-color: var(--sub-color-1);
+}
+
+.mobile-filters__block {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 15px;
+}
+
+.mobile-filters__all {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: var(--text-color-1);
+	background-color: var(--main-color-1);
+	height: 30px;
+	width: 90px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.main__search {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 115px;
+		height: 78px;
+	}
+
+	.main__search_submit {
+		height: 43px;
+		width: 200px;
+		font-size: 24px;
+	}
+
+	.main__search_filters {
+		display: flex;
+		align-items: center;
+		gap: 44px;
+	}
+
+	.main__search_filters .filters__item {
+		cursor: pointer;
+	}
+
+	.main__content {
+		padding: 30px 0 0 0;
+	}
+
+	.main__content_info {
+		margin-bottom: 8px;
+		font-size: 16px;
+	}
+
+	.main__content_cards {
+		gap: 8px;
+		/*perspective: 10000px;*/
+	}
+
+	.main__content_more {
+		width: 220px;
+		height: 50px;
+		font-size: 24px;
+		margin: 30px auto;
+	}
+
+	.main__about {
+		padding: 38px 0;
+	}
+
+	.main__about_title {
+		font-size: 36px;
+		line-height: 44px;
+		margin-bottom: 20px;
+	}
+
+	.main__about_description {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 20px;
+	}
+
+	.main__about_blocks {
+		flex-wrap: unset;
+		column-gap: 20px;
+		row-gap: unset;
+	}
+
+	.about__block {
+		flex: 1;
+		height: 260px;
+		max-width: 220px;
+		padding: 35px 16px;
+		font-size: 16px;
+		line-height: 19px;
+		border-radius: 10px;
+	}
+}
+
+@media (min-width: 1440px) {
+	section#filters {
+		display: block;
+		background-color: var(--sub-color-1);
+	}
+
+	section#mobile-filters {
+		display: none;
+	}
+
+	.main__search {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 115px;
+		height: 78px;
+	}
+
+	.main__search_submit.btn {
+		height: 43px;
+		width: 200px;
+		font-size: 24px;
+	}
+
+	.main__search_filters {
+		display: flex;
+		align-items: center;
+		gap: 44px;
+	}
+
+	.main__content {
+		padding: 50px 0 0 0;
+	}
+
+	.main__content_info {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+
+	.main__content_cards {
+		gap: 22px;
+		/*perspective: 10000px;*/
+	}
+
+	.main__content_more {
+		width: 300px;
+		height: 73px;
+		font-size: 32px;
+		margin: 55px auto;
+	}
+
+	.main__about {
+		padding: 45px 0;
+	}
+
+	.main__about_title {
+		font-size: 40px;
+		line-height: 48px;
+		margin-bottom: 35px;
+	}
+
+	.main__about_description {
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 35px;
+	}
+
+	.main__about_blocks {
+		margin: 0 25px;
+		column-gap: 70px;
+	}
+
+	.about__block {
+		height: 270px;
+		max-width: 370px;
+		padding: 25px;
+		font-size: 20px;
+		line-height: 24px;
+		border-radius: 10px;
+	}
+}

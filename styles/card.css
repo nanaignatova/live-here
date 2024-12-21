@@ -1,0 +1,295 @@
+/*
+ Стили карточек объявлений
+*/
+
+
+.card {
+	width: 100%;
+	padding: 4px;
+	background-color: var(--main-color-1);
+	transition: 0.2s all;
+	color: var(--text-color-1);
+	box-shadow: 0 4px 4px 0 transparent;
+	transform-style: preserve-3d;
+}
+
+.dark__theme .card {
+	background-color: var(--sub-color-1);
+}
+
+.card:hover {
+	box-shadow: 0 10px 4px 0 var(--main-color-3);
+	/*transform: rotateX(8deg); !* Подъем с легким поворотом для 3D эффекта *!*/
+	/*transform: scale(1.005);*/
+}
+
+.card__content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 245px auto;
+	row-gap: 10px;
+}
+
+.card__content_slider {
+	position: relative;
+	max-width: 354px;
+	height: 245px;
+	overflow: hidden;
+}
+
+.card__content_images {
+	display: flex;
+	align-items: center;
+	transition: 0.2s all ease-in-out;
+}
+
+.images__item {
+	position: relative;
+	width: 354px;
+	height: 245px;
+	flex: 1 0 auto;
+}
+
+.card__content_controls {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+.card__content_controls .control {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 10px;
+	transition: 0.2s all;
+	cursor: pointer;
+}
+
+.card__content_controls .control img {
+	transform: scale(0.55);
+}
+
+.card__content_controls .controls__prev {
+	transform: rotate(180deg);
+}
+
+.card__content_controls .control:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card__content_counter {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.card__content_info {
+	display: flex;
+	flex-direction: column;
+	padding: 0 9px;
+	gap: 10px;
+}
+
+.card__info_title {
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.card__updated {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 261px;
+	right: 13px;
+	gap: 3px;
+	font-size: 10px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.card__updated svg {
+	width: 10px;
+	height: 10px;
+}
+
+.dark__theme .card__updated svg path {
+	fill: rgba(255, 255, 255, 0.7);
+}
+
+.dark__theme .card__updated {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.card__info_address, .card__info_neighbour {
+	font-size: 14px;
+}
+
+.card__info_description {
+	font-size: 11px;
+}
+
+.card__call {
+	margin: 10px 4px;
+}
+
+.current__slide {
+	animation-name: scaleIn;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@media (min-width: 768px) {
+	.card {
+		position: relative;
+		min-height: 292px;
+		padding: 6px;
+		color: var(--text-color-1);
+	}
+
+	.card__content {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: 1fr;
+		column-gap: 21px;
+		row-gap: unset;
+	}
+
+	.card__content_slider {
+		width: 280px;
+		height: 280px;
+	}
+
+	.images__item {
+		width: 280px;
+		height: 280px;
+	}
+
+	.card__content_controls .control img {
+		transform: unset;
+	}
+
+	.card__content_counter {
+		bottom: 16px;
+		font-size: 21px;
+	}
+
+	.card__content_info {
+		padding: 11px 0;
+		gap: 11px;
+	}
+
+	.card__info_title {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.card__info_address, .card__info_neighbour {
+		font-size: 17px;
+	}
+
+	.card__info_description {
+		font-size: 14px;
+	}
+
+	.card__updated {
+		top: 7px;
+		right: 7px;
+		gap: 4px;
+		font-size: 13px;
+	}
+
+	.card__updated svg {
+		width: 16px;
+		height: 16px;
+	}
+
+	.card__call {
+		position: absolute;
+		bottom: 9px;
+		right: 7px;
+		width: 135px;
+		height: 34px;
+		font-size: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 4px 0 #00000040;
+	}
+}
+
+@media (min-width: 1440px) {
+	.card {
+		padding: 11px;
+	}
+
+	.card__content {
+		display: grid;
+		column-gap: 42px;
+	}
+
+	.card__content_slider {
+		width: 407px;
+		height: 407px;
+		max-width: unset;
+	}
+
+	.images__item {
+		width: 407px;
+		height: 407px;
+	}
+
+	.card__content_counter {
+		bottom: 18px;
+		font-size: 24px;
+	}
+
+	.card__content_info {
+		padding: 30px 0;
+		gap: 20px;
+	}
+
+	.card__info_title {
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	.card__info_taps {
+		padding: 10px 0;
+	}
+
+	.card__info_address, .card__info_neighbour {
+		font-size: 24px;
+	}
+
+	.card__info_description {
+		font-size: 20px;
+	}
+
+	.card__updated {
+		top: 12px;
+		right: 34px;
+		gap: 8px;
+		font-size: 16px;
+	}
+
+	.card__updated svg {
+		width: unset;
+		height: unset;
+	}
+
+	.card__call {
+		bottom: 12px;
+		right: 34px;
+		width: 200px;
+		height: 50px;
+		font-size: 26px;
+	}
+}

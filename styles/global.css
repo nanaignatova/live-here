@@ -1,0 +1,85 @@
+/*
+ Общие стили сайта
+*/
+
+
+:root {
+	--main-color-1: #FFFFFF;
+	--main-color-2: #EFEFEF;
+	--main-color-3: #D9D9D9;
+
+	--sub-color-1: #31333B;
+	--sub-color-2: #FF9500;
+	--sub-color-3: #CDD7FF;
+	--sub-color-4: #d0d0d0;
+
+	--text-color-1: #000000;
+}
+
+.dark__theme:root {
+	--main-color-1: #161616;
+	--main-color-2: #1E1E1E;
+	--main-color-3: #161616;
+
+	--sub-color-1: #31333B;
+	--sub-color-2: #FF9500;
+	--sub-color-3: #5F6DA4;
+	--sub-color-4: #3A3A3A;
+
+	--text-color-1: #FFFFFF;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+main {
+	flex: 1 1 0;
+}
+
+.image__wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.image__wrapper img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--sub-color-2);
+	border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: #FFFFFF;
+}
+
+body::-webkit-scrollbar {
+	width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: var(--sub-color-4);
+}

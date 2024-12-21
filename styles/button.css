@@ -1,0 +1,54 @@
+/*
+ Стили кнопок
+*/
+
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	border-radius: 10px;
+	font-size: 14px;
+	transition: 0.2s all;
+	color: var(--text-color-1);
+	cursor: pointer;
+}
+
+.dark__theme .btn {
+	box-shadow: none;
+}
+
+.btn.btn-primary {
+	color: #000000;
+	background-color: var(--sub-color-2);
+}
+
+.btn.btn-primary:hover {
+	background-color: #d58100;
+}
+
+.btn.btn-primary:active {
+	background-color: #e88a00;
+}
+
+@media (min-width: 1440px) {
+	.btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--sub-color-2);
+		border-radius: 10px;
+		box-shadow: 0 4px 4px 0 #0000004D, 0 8px 12px 6px #00000026;
+		transition: 0.2s all;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		background-color: #d58100;
+	}
+
+	.btn:active {
+		background-color: #e88a00;
+	}
+}

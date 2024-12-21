@@ -1,0 +1,25 @@
+/*
+ Стили лейаута
+*/
+
+
+.container {
+	max-width: 380px;
+	margin: 0 auto;
+	padding: 0 9px;
+	/*box-sizing: content-box;*/
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 768px;
+		padding: 0 19px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1440px;
+		padding: 0 55px;
+	}
+}

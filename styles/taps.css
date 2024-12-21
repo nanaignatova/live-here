@@ -1,0 +1,48 @@
+/*
+ Стили "тапов"
+*/
+
+.taps {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.taps__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 27px;
+	width: 55px;
+	font-size: 12px;
+	background-color: #F2F2F2;
+	border-radius: 40px;
+}
+
+.dark__theme .taps__item {
+	background-color: #161616;
+}
+
+@media (min-width: 768px) {
+	.taps {
+		gap: 13px;
+	}
+
+	.taps__item {
+		height: 35px;
+		width: 70px;
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.taps {
+		gap: 18px;
+	}
+
+	.taps__item {
+		height: 40px;
+		width: 85px;
+		font-size: 18px;
+	}
+}

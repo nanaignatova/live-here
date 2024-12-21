@@ -1,0 +1,133 @@
+/*
+ Стили футера
+*/
+
+
+footer {
+	background-color: #31333B;
+	padding: 25px 0;
+	color: #FFFFFF;
+}
+
+.footer__title {
+	margin-bottom: 21px;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.footer__contacts {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 21px;
+	margin-bottom: 24px;
+}
+
+.footer__contacts_phones {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.contact__item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.contact__item svg {
+	width: 15px;
+	height: 15px;
+}
+
+.footer__contacts .contacts__text {
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.footer__description {
+	font-size: 11px;
+	line-height: 13px;
+}
+
+@media (min-width: 768px) {
+	footer {
+		padding: 40px 0;
+	}
+
+	.footer__title {
+		margin-bottom: 37px;
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	.footer__contacts {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 38px;
+	}
+
+	.footer__contacts_phones {
+		flex-direction: column;
+		gap: 21px;
+	}
+
+	.contact__item {
+		gap: 12px;
+	}
+
+	.contact__item svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.footer__contacts .contacts__text {
+		font-size: 18px;
+	}
+
+	.footer__description {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+
+@media (min-width: 1440px) {
+	footer {
+		padding: 45px 0 50px;
+	}
+
+	.footer__title {
+		margin-bottom: 44px;
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+	.footer__contacts {
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	.footer__contacts_phones {
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.contact__item {
+		gap: 19px;
+	}
+
+	.contact__item svg {
+		width: unset;
+		height: unset;
+	}
+
+	.footer__contacts .contacts__text {
+		font-size: 24px;
+	}
+
+	.footer__description {
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
