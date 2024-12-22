@@ -2,7 +2,6 @@
  Стили главной страницы
 */
 
-
 main {
 	background-color: var(--main-color-2);
 }
@@ -242,7 +241,6 @@ section#about {
 
 	.main__content_cards {
 		gap: 22px;
-		/*perspective: 10000px;*/
 	}
 
 	.main__content_more {

@@ -2,7 +2,6 @@
  Стили select элементов
 */
 
-
 .chooser {
 	position: relative;
 	user-select: none;
@@ -14,19 +13,30 @@
 	gap: 2px;
 	font-size: 12px;
 	cursor: pointer;
+	transition: 0.2s all;
+}
+
+.dark__theme .chooser__visible:hover {
+	color: var(--sub-color-2);
+}
+
+.dark__theme .chooser__visible:hover svg path {
+	fill: var(--sub-color-2);
 }
 
 .chooser__visible svg {
 	transform: scale(0.6);
+	transition: 0.2s all;
 }
 
 .chooser__visible svg path {
 	fill: var(--text-color-1);
+	transition: 0.2s all;
 }
 
 .chooser__variants {
 	position: absolute;
-	top: calc(100% + 4px);
+	top: calc(100% + 5px);
 	right: 0;
 	width: 207px;
 	background-color: var(--main-color-1);
@@ -83,6 +93,14 @@
 	border-radius: 10px;
 }
 
+.filter__chooser_field svg path {
+	transition: 0.2s all;
+}
+
+.filter__chooser_field:hover svg path {
+	fill: var(--sub-color-2);
+}
+
 .chooser.opened .filter__chooser_field {
 	border-radius: 10px 10px 0 0;
 }
@@ -94,6 +112,10 @@
 
 .chooser.opened .filter__chooser_variants .filter__variant {
 	border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.chooser.opened .filter__chooser_field svg path {
+	fill: var(--sub-color-2);
 }
 
 .filter__chooser_variants {

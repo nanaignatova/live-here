@@ -2,7 +2,6 @@
  Стили карточек объявлений
 */
 
-
 .card {
 	width: 100%;
 	padding: 4px;
@@ -19,8 +18,6 @@
 
 .card:hover {
 	box-shadow: 0 10px 4px 0 var(--main-color-3);
-	/*transform: rotateX(8deg); !* Подъем с легким поворотом для 3D эффекта *!*/
-	/*transform: scale(1.005);*/
 }
 
 .card__content {
@@ -249,6 +246,10 @@
 	.card__content_counter {
 		bottom: 18px;
 		font-size: 24px;
+	}
+
+	.card__content_controls .control {
+		padding: 0 20px;
 	}
 
 	.card__content_info {

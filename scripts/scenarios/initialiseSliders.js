@@ -30,10 +30,8 @@ export function initialiseFlatBigSlider() {
 	slider.writeModelAndInitialiseSlider(flatImages);
 
 	const images = slider.Model.images;
-	console.log(images);
 
 	slider.Controller.onChange((index) => {
-		console.log(index);
 		slider.View.checkSlidesAndInteract(index);
 		slider.View.setCurrent(`images/${images[index]}`);
 	});

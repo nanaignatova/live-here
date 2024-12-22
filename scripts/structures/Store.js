@@ -1,7 +1,7 @@
 // Класс создающий общее хранилище для сайта, которое хранится в localStorage
 export class Store {
 	static #key = 'store';
-	static #state = null;
+	static #state = {};
 
 	static get state() {
 		return JSON.parse(JSON.stringify(this.#state));
@@ -15,7 +15,7 @@ export class Store {
 		if (!window) return;
 
 		const serialisedData = window.localStorage.getItem(Store.#key);
-		Store.#state = JSON.parse(serialisedData);
+		Store.#state = JSON.parse(serialisedData) || {};
 	}
 
 	static save() {
