@@ -86,7 +86,7 @@ const cardRenderHtmlFunction = ({
 					</svg>
 	        <h6>${lastUpdated}</h6>
 	      </div>
-	      <a class="btn btn-primary card__call" href="flat.html?card=${id}">Позвонить</a>
+	      <a class="btn btn-primary card__call" href="flat.html?card=${id}" target="_blank">Позвонить</a>
 		  </div>
 		`;
 };
