@@ -32,13 +32,13 @@
 	opacity: 1;
 }
 
-.filters__modal .filters__modal_body > div {
+.filters__modal .filters__modal_body>div {
 	opacity: 0;
 	transition: 0.2s all;
 	transition-delay: 0.2s;
 }
 
-.filters__modal.opened .filters__modal_body > div {
+.filters__modal.opened .filters__modal_body>div {
 	opacity: 1;
 }
 
@@ -174,9 +174,9 @@
 	background-color: var(--sub-color-3);
 }
 
-.dark__theme .filters__body_radio-group .radio-group__item,
-.dark__theme .filters__body_flats .flats__item,
-.dark__theme .filters__body_cities .cities__item,
+.dark__theme .filters__body_radio-group .radio-group__item:not(.selected),
+.dark__theme .filters__body_flats .flats__item:not(.selected),
+.dark__theme .filters__body_cities .cities__item:not(.selected),
 .filters__body_actions .actions__clear {
 	background-color: #3A3A3A;
 }

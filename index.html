@@ -1,28 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Живи Тут!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/catalog.css" />
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/button.css">
-    <link rel="stylesheet" href="styles/card.css">
-    <link rel="stylesheet" href="styles/chooser.css">
-    <link rel="stylesheet" href="styles/taps.css">
-    <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="styles/modals.css">
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
-    <script type="module" defer>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Живи Тут!</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/global.css">
+		<link rel="stylesheet" href="styles/layout.css">
+		<link rel="stylesheet" href="styles/header.css">
+		<link rel="stylesheet" href="styles/catalog.css">
+		<link rel="stylesheet" href="styles/footer.css">
+		<link rel="stylesheet" href="styles/button.css">
+		<link rel="stylesheet" href="styles/card.css">
+		<link rel="stylesheet" href="styles/chooser.css">
+		<link rel="stylesheet" href="styles/taps.css">
+		<link rel="stylesheet" href="styles/animations.css">
+		<link rel="stylesheet" href="styles/modals.css">
+		<link rel="icon" type="image/x-icon" href="images/icon.ico">
+		<script type="module" defer>
         import { Store } from "./scripts/structures/Store.js";
         import { ThemeSwitcher } from "./scripts/structures/ThemeSwitcher.js";
         import { Modal } from "./scripts/structures/Modal.js";
@@ -50,196 +52,256 @@
             window.scrollY > 0 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
         });
     </script>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header">
-                <div class="header__burger">
-                    <div class="header__burger_icon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 0H0V3.0303H20V0Z" fill="black"/>
-                            <path d="M20 16.9697H0V20H20V16.9697Z" fill="black"/>
-                            <path d="M20 8.48483H0V11.5151H20V8.48483Z" fill="black"/>
-                        </svg>
-                    </div>
-                </div>
-                <a class="header__logo" href="index.html">Живи Тут!</a>
-                <nav class="header__nav">
-                    <a class="header__nav_link" href="index.html#catalog">Каталог</a>
-                    <a class="header__nav_link" href="index.html#about">О нас</a>
-                    <a class="header__nav_link" href="#contacts">Контакты</a>
-                </nav>
-                <div class="header__switcher">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M34.1468 14.1468V5.85323H25.8532L20 0L14.1468 5.85323H5.85323V14.1468L0 20L5.85323 25.8532V34.1468H14.1468L20 40L25.8532 34.1468H34.1468V25.8532L40 20L34.1468 14.1468ZM30.6101 24.3855V30.6101H24.3855L20 34.9956L15.6145 30.6101H9.38992V24.3855L5.00442 20L9.38992 15.6145V9.38992H15.6145L20 5.00442L24.3855 9.38992H30.6101V15.6145L34.9956 20L30.6101 24.3855ZM20 10.2741V29.7259C25.3581 29.7259 29.7259 25.3581 29.7259 20C29.7259 14.6419 25.3581 10.2741 20 10.2741Z" fill="#31333B"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section id="filters">
-            <div class="container">
-                <div class="main__search">
-                    <div class="main__search_filters">
-                        <div id="chooser-type" class="filters__item chooser filter__chooser"></div>
-                        <div id="chooser-what" class="filters__item chooser filter__chooser"></div>
-                        <div id="chooser-flat" class="filters__item chooser filter__chooser"></div>
-                        <div id="chooser-city" class="filters__item chooser filter__chooser"></div>
-                    </div>
-                    <button class="btn btn-primary main__search_submit">Найти</button>
-                </div>
-            </div>
-        </section>
-        <section id="mobile-filters">
-            <div class="container">
-                <div class="mobile-filters__block">
-                    <div id="mobile-filters-select" class="main__search_filters chooser"></div>
-                    <button class="mobile-filters__all">Фильтры</button>
-                </div>
-            </div>
-        </section>
-        <section id="catalog">
-            <div class="container">
-                <div class="main__content">
-                    <div class="main__content_info">
-                        <div class="info__amount"></div>
-                        <div id="sorting" class="info__sorting chooser"></div>
-                    </div>
-                    <div class="main__content_cards"></div>
-                    <button class="main__content_more">Показать еще</button>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="container">
-                <div class="main__about">
-                    <h3 class="main__about_title">О нас:</h3>
-                    <h4 class="main__about_description">
-                        Добро пожаловать на Живи тут! Мы — команда профессионалов, стремящихся сделать процесс аренды недвижимости удобным, прозрачным и безопасным для каждого пользователя.
-                    </h4>
-                    <div class="main__about_blocks">
-                        <div class="about__block">
-                            Широкий выбор объектов:
-                            Мы работаем с проверенными агентствами и собственниками, чтобы предложить вам актуальную и разнообразную базу недвижимости.
-                        </div>
-                        <div class="about__block">
-                            Удобный поиск и фильтры: Благодаря нашим инструментам поиска, вы можете быстро найти объекты по ключевым параметрам — будь то цена, расположение, количество комнат или особые условия.
-                        </div>
-                        <div class="about__block">
-                            Прозрачность и безопасность: Мы заботимся о вашей безопасности и проверяем все предложения, чтобы вы могли быть уверены в их подлинности.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer id="contacts">
-        <div class="container">
-            <div class="footer">
-                <h3 class="footer__title">Контакты:</h3>
-                <div class="footer__contacts">
-                    <div class="footer__contacts_phones">
-                        <div class="footer__phones_item contact__item">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z" fill="#FF9500"/>
-                            </svg>
-                            <a class="contacts__text" href="tel:375291111111">+375 (29) 111-11-11</a>
-                        </div>
-                        <div class="footer__phones_item contact__item">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z" fill="#FF9500"/>
-                            </svg>
-                            <a class="contacts__text" href="tel:375291111111">+375 (29) 111-11-11</a>
-                        </div>
-                    </div>
-                    <div class="footer__contacts_location">
-                        <div class="contact__item">
-                            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.5 0.127441C6.03643 0.127441 0 5.29194 0 11.6774C0 20.3399 13.5 33.1274 13.5 33.1274C13.5 33.1274 27 20.3399 27 11.6774C27 5.29194 20.9636 0.127441 13.5 0.127441ZM3.85714 11.6774C3.85714 7.12344 8.17714 3.42744 13.5 3.42744C18.8229 3.42744 23.1429 7.12344 23.1429 11.6774C23.1429 16.4294 17.5886 23.5409 13.5 27.9794C9.48857 23.5739 3.85714 16.3799 3.85714 11.6774Z" fill="#FF9500"/>
-                                <path d="M13.5 16.1274C15.9853 16.1274 18 13.8889 18 11.1274C18 8.36602 15.9853 6.12744 13.5 6.12744C11.0147 6.12744 9 8.36602 9 11.1274C9 13.8889 11.0147 16.1274 13.5 16.1274Z" fill="#FF9500" />
-                            </svg>
-                            <a class="contacts__text" href="https://yandex.by/maps/157/minsk/house/Zk4Ycw5kT0cHQFtpfXVwdnlmbQ==/?ll=27.596422%2C53.918196&z=18" target="_blank">г.Минск, ул. Петруся Бровки 6, корп.1</a>
-                        </div>
-                    </div>
-                </div>
-                <h5 class="footer__description">
-                    Оказание услуг ООО «Живи тут»,УНП 111111111
-                    <br />
-                    Свидетельство о регистрации №1111111 выданное 11 ноября 1111 г. Минским городским исполнительным комитетом
-                    <br />
-                    111111, г. Минск, ул. Минская 11. Время работы 9:00-18:00 (сб, вс – выходной)
-                </h5>
-            </div>
-        </div>
-    </footer>
-    <div class="nav__modal modal">
-        <div class="nav__modal_content modal__content">
-            <nav class="nav__modal_list">
-                <a href="index.html#catalog" class="nav__modal_item">Каталог</a>
-                <a href="index.html#about" class="nav__modal_item">О нас</a>
-                <a href="index.html#contacts" class="nav__modal_item">Контакты</a>
-                <div class="nav__modal_closer modal__closer">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black"/>
-                    </svg>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="filters__modal modal">
-        <div class="filters__modal_content modal__content">
-            <div class="filters__modal_header">
-                <div class="header__wrapper">
-                    <h4 class="filters__header_closer modal__closer">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black"/>
-                        </svg>
-                        <span>Фильтры</span>
-                    </h4>
-                </div>
-            </div>
-            <form class="filters__modal_body">
-                <div class="filters__body_radio-group">
-                    <div class="radio-group__item">Купить</div>
-                    <div class="radio-group__item selected">Снять</div>
-                    <div class="radio-group__item">Посуточно</div>
-                    <input type="radio" value="0" disabled style="display: none">
-                </div>
-                <div class="filters__body_radio-group">
-                    <div class="radio-group__item">Комнату</div>
-                    <div class="radio-group__item selected">Квартиру</div>
-                    <div class="radio-group__item">Дом</div>
-                    <input type="radio" value="1" disabled style="display: none">
-                </div>
-                <div class="filters__body_flats filters__body_group">
-                    <h5>Комнат</h5>
-                    <div class="flats__list">
-                        <div class="flats__item">1</div>
-                        <div class="flats__item selected">2</div>
-                        <div class="flats__item">3</div>
-                        <div class="flats__item">4</div>
-                        <div class="flats__item">5+</div>
-                    </div>
-                </div>
-                <div class="filters__body_cities filters__body_group">
-                    <h5>Город</h5>
-                    <div class="cities__list">
-                        <div class="cities__item selected">Минск</div>
-                        <div class="cities__item">Брест</div>
-                        <div class="cities__item">Витебск</div>
-                        <div class="cities__item">Гомель</div>
-                        <div class="cities__item">Гродно</div>
-                        <div class="cities__item">Могилев</div>
-                    </div>
-                </div>
-                <div class="filters__body_actions">
-                    <button class="btn actions__clear">Сбросить</button>
-                    <button class="btn btn-primary">Найти</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header">
+					<div class="header__burger">
+						<div class="header__burger_icon">
+							<svg width="20" height="20" viewBox="0 0 20 20"
+								fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 0H0V3.0303H20V0Z" fill="black" />
+								<path d="M20 16.9697H0V20H20V16.9697Z"
+									fill="black" />
+								<path d="M20 8.48483H0V11.5151H20V8.48483Z"
+									fill="black" />
+							</svg>
+						</div>
+					</div>
+					<a class="header__logo" href="index.html">Живи Тут!</a>
+					<nav class="header__nav">
+						<a class="header__nav_link"
+							href="index.html#catalog">Каталог</a>
+						<a class="header__nav_link" href="index.html#about">О
+							нас</a>
+						<a class="header__nav_link"
+							href="#contacts">Контакты</a>
+					</nav>
+					<div class="header__switcher">
+						<svg width="40" height="40" viewBox="0 0 40 40"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M34.1468 14.1468V5.85323H25.8532L20 0L14.1468 5.85323H5.85323V14.1468L0 20L5.85323 25.8532V34.1468H14.1468L20 40L25.8532 34.1468H34.1468V25.8532L40 20L34.1468 14.1468ZM30.6101 24.3855V30.6101H24.3855L20 34.9956L15.6145 30.6101H9.38992V24.3855L5.00442 20L9.38992 15.6145V9.38992H15.6145L20 5.00442L24.3855 9.38992H30.6101V15.6145L34.9956 20L30.6101 24.3855ZM20 10.2741V29.7259C25.3581 29.7259 29.7259 25.3581 29.7259 20C29.7259 14.6419 25.3581 10.2741 20 10.2741Z"
+								fill="#31333B" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="filters">
+				<div class="container">
+					<div class="main__search">
+						<div class="main__search_filters">
+							<div id="chooser-type"
+								class="filters__item chooser filter__chooser"></div>
+							<div id="chooser-what"
+								class="filters__item chooser filter__chooser"></div>
+							<div id="chooser-flat"
+								class="filters__item chooser filter__chooser"></div>
+							<div id="chooser-city"
+								class="filters__item chooser filter__chooser"></div>
+						</div>
+						<button
+							class="btn btn-primary main__search_submit">Найти</button>
+					</div>
+				</div>
+			</section>
+			<section id="mobile-filters">
+				<div class="container">
+					<div class="mobile-filters__block">
+						<div id="mobile-filters-select"
+							class="main__search_filters chooser"></div>
+						<button class="mobile-filters__all">Фильтры</button>
+					</div>
+				</div>
+			</section>
+			<section id="catalog">
+				<div class="container">
+					<div class="main__content">
+						<div class="main__content_info">
+							<div class="info__amount"></div>
+							<div id="sorting"
+								class="info__sorting chooser"></div>
+						</div>
+						<div class="main__content_cards"></div>
+						<button class="main__content_more">Показать еще</button>
+					</div>
+				</div>
+			</section>
+			<section id="about">
+				<div class="container">
+					<div class="main__about">
+						<h3 class="main__about_title">О нас:</h3>
+						<h4 class="main__about_description">
+							Добро пожаловать на Живи тут! Мы — команда
+							профессионалов, стремящихся сделать процесс аренды
+							недвижимости удобным, прозрачным и безопасным для
+							каждого пользователя.
+						</h4>
+						<div class="main__about_blocks">
+							<div class="about__block">
+								Широкий выбор объектов:
+								Мы работаем с проверенными агентствами и
+								собственниками, чтобы предложить вам актуальную
+								и разнообразную базу недвижимости.
+							</div>
+							<div class="about__block">
+								Удобный поиск и фильтры: Благодаря нашим
+								инструментам поиска, вы можете быстро найти
+								объекты по ключевым параметрам — будь то цена,
+								расположение, количество комнат или особые
+								условия.
+							</div>
+							<div class="about__block">
+								Прозрачность и безопасность: Мы заботимся о
+								вашей безопасности и проверяем все предложения,
+								чтобы вы могли быть уверены в их подлинности.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="contacts">
+			<div class="container">
+				<div class="footer">
+					<h3 class="footer__title">Контакты:</h3>
+					<div class="footer__contacts">
+						<div class="footer__contacts_phones">
+							<div class="footer__phones_item contact__item">
+								<svg width="30" height="30" viewBox="0 0 30 30"
+									fill="#ffffff"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z"
+										fill="#FF9500" />
+								</svg>
+								<a class="contacts__text"
+									href="tel:375291111111">+375 (29)
+									111-11-11</a>
+							</div>
+							<div class="footer__phones_item contact__item">
+								<svg width="30" height="30" viewBox="0 0 30 30"
+									fill="#ffffff"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z"
+										fill="#FF9500" />
+								</svg>
+								<a class="contacts__text"
+									href="tel:375291111111">+375 (29)
+									111-11-11</a>
+							</div>
+						</div>
+						<div class="footer__contacts_location">
+							<div class="contact__item">
+								<svg width="27" height="34" viewBox="0 0 27 34"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M13.5 0.127441C6.03643 0.127441 0 5.29194 0 11.6774C0 20.3399 13.5 33.1274 13.5 33.1274C13.5 33.1274 27 20.3399 27 11.6774C27 5.29194 20.9636 0.127441 13.5 0.127441ZM3.85714 11.6774C3.85714 7.12344 8.17714 3.42744 13.5 3.42744C18.8229 3.42744 23.1429 7.12344 23.1429 11.6774C23.1429 16.4294 17.5886 23.5409 13.5 27.9794C9.48857 23.5739 3.85714 16.3799 3.85714 11.6774Z"
+										fill="#FF9500" />
+									<path
+										d="M13.5 16.1274C15.9853 16.1274 18 13.8889 18 11.1274C18 8.36602 15.9853 6.12744 13.5 6.12744C11.0147 6.12744 9 8.36602 9 11.1274C9 13.8889 11.0147 16.1274 13.5 16.1274Z"
+										fill="#FF9500" />
+								</svg>
+								<a class="contacts__text"
+									href="https://yandex.by/maps/157/minsk/house/Zk4Ycw5kT0cHQFtpfXVwdnlmbQ==/?ll=27.596422%2C53.918196&z=18"
+									target="_blank">г.Минск, ул. Петруся Бровки
+									6, корп.1</a>
+							</div>
+						</div>
+					</div>
+					<h5 class="footer__description">
+						Оказание услуг ООО «Живи тут»,УНП 111111111
+						<br />
+						Свидетельство о регистрации №1111111 выданное 11 ноября
+						1111 г. Минским городским исполнительным комитетом
+						<br />
+						111111, г. Минск, ул. Минская 11. Время работы
+						9:00-18:00 (сб, вс – выходной)
+					</h5>
+				</div>
+			</div>
+		</footer>
+		<div class="nav__modal modal">
+			<div class="nav__modal_content modal__content">
+				<nav class="nav__modal_list">
+					<a href="index.html#catalog"
+						class="nav__modal_item">Каталог</a>
+					<a href="index.html#about" class="nav__modal_item">О нас</a>
+					<a href="index.html#contacts"
+						class="nav__modal_item">Контакты</a>
+					<div class="nav__modal_closer modal__closer">
+						<svg width="14" height="14" viewBox="0 0 14 14"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+								fill="black" />
+						</svg>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="filters__modal modal">
+			<div class="filters__modal_content modal__content">
+				<div class="filters__modal_header">
+					<div class="header__wrapper">
+						<h4 class="filters__header_closer modal__closer">
+							<svg width="14" height="14" viewBox="0 0 14 14"
+								fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+									fill="black" />
+							</svg>
+							<span>Фильтры</span>
+						</h4>
+					</div>
+				</div>
+				<form class="filters__modal_body">
+					<div class="filters__body_radio-group">
+						<div class="radio-group__item">Купить</div>
+						<div class="radio-group__item selected">Снять</div>
+						<div class="radio-group__item">Посуточно</div>
+						<input type="radio" value="0" disabled
+							style="display: none">
+					</div>
+					<div class="filters__body_radio-group">
+						<div class="radio-group__item">Комнату</div>
+						<div class="radio-group__item selected">Квартиру</div>
+						<div class="radio-group__item">Дом</div>
+						<input type="radio" value="1" disabled
+							style="display: none">
+					</div>
+					<div class="filters__body_flats filters__body_group">
+						<h5>Комнат</h5>
+						<div class="flats__list">
+							<div class="flats__item">1</div>
+							<div class="flats__item selected">2</div>
+							<div class="flats__item">3</div>
+							<div class="flats__item">4</div>
+							<div class="flats__item">5+</div>
+						</div>
+					</div>
+					<div class="filters__body_cities filters__body_group">
+						<h5>Город</h5>
+						<div class="cities__list">
+							<div class="cities__item selected">Минск</div>
+							<div class="cities__item">Брест</div>
+							<div class="cities__item">Витебск</div>
+							<div class="cities__item">Гомель</div>
+							<div class="cities__item">Гродно</div>
+							<div class="cities__item">Могилев</div>
+						</div>
+					</div>
+					<div class="filters__body_actions">
+						<button class="btn actions__clear">Сбросить</button>
+						<button class="btn btn-primary">Найти</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
 </html>

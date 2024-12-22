@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flat</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/reset.css" />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/header.css" />
-  <link rel="stylesheet" href="styles/footer.css" />
-  <link rel="stylesheet" href="styles/item.css" />
-  <link rel="stylesheet" href="styles/taps.css">
-  <link rel="stylesheet" href="styles/animations.css">
-  <link rel="stylesheet" href="styles/modals.css">
-  <link rel="icon" type="image/x-icon" href="images/icon.ico">
-  <script type="module" defer>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/item.css">
+    <link rel="stylesheet" href="styles/taps.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/modals.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <script type="module" defer>
 		import { Store } from "./scripts/structures/Store.js";
 		import { ThemeSwitcher } from "./scripts/structures/ThemeSwitcher.js";
 		import { Modal } from "./scripts/structures/Modal.js";
@@ -41,143 +43,179 @@
 		Modal.bindModalWithItsDomView('.nav__modal', '.header__burger_icon');
 		ThemeSwitcher.bindSwitcherWithElement('.header__switcher');
   </script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="header">
-        <div class="header__burger">
-          <div class="header__burger_icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 0H0V3.0303H20V0Z" fill="black"/>
-              <path d="M20 16.9697H0V20H20V16.9697Z" fill="black"/>
-              <path d="M20 8.48483H0V11.5151H20V8.48483Z" fill="black"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header__burger">
+            <div class="header__burger_icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0H0V3.0303H20V0Z" fill="black" />
+                <path d="M20 16.9697H0V20H20V16.9697Z" fill="black" />
+                <path d="M20 8.48483H0V11.5151H20V8.48483Z" fill="black" />
+              </svg>
+            </div>
+          </div>
+          <a class="header__logo" href="index.html">Живи Тут!</a>
+          <nav class="header__nav">
+            <a class="header__nav_link" href="index.html#catalog">Каталог</a>
+            <a class="header__nav_link" href="index.html#about">О нас</a>
+            <a class="header__nav_link" href="#contacts">Контакты</a>
+          </nav>
+          <div class="header__switcher">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.1468 14.1468V5.85323H25.8532L20 0L14.1468 5.85323H5.85323V14.1468L0 20L5.85323 25.8532V34.1468H14.1468L20 40L25.8532 34.1468H34.1468V25.8532L40 20L34.1468 14.1468ZM30.6101 24.3855V30.6101H24.3855L20 34.9956L15.6145 30.6101H9.38992V24.3855L5.00442 20L9.38992 15.6145V9.38992H15.6145L20 5.00442L24.3855 9.38992H30.6101V15.6145L34.9956 20L30.6101 24.3855ZM20 10.2741V29.7259C25.3581 29.7259 29.7259 25.3581 29.7259 20C29.7259 14.6419 25.3581 10.2741 20 10.2741Z"
+                fill="#31333B" />
             </svg>
           </div>
         </div>
-        <a class="header__logo" href="index.html">Живи Тут!</a>
-        <nav class="header__nav">
-          <a class="header__nav_link" href="index.html#catalog">Каталог</a>
-          <a class="header__nav_link" href="index.html#about">О нас</a>
-          <a class="header__nav_link" href="#contacts">Контакты</a>
-        </nav>
-        <div class="header__switcher">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M34.1468 14.1468V5.85323H25.8532L20 0L14.1468 5.85323H5.85323V14.1468L0 20L5.85323 25.8532V34.1468H14.1468L20 40L25.8532 34.1468H34.1468V25.8532L40 20L34.1468 14.1468ZM30.6101 24.3855V30.6101H24.3855L20 34.9956L15.6145 30.6101H9.38992V24.3855L5.00442 20L9.38992 15.6145V9.38992H15.6145L20 5.00442L24.3855 9.38992H30.6101V15.6145L34.9956 20L30.6101 24.3855ZM20 10.2741V29.7259C25.3581 29.7259 29.7259 25.3581 29.7259 20C29.7259 14.6419 25.3581 10.2741 20 10.2741Z" fill="#31333B"/>
-          </svg>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main__back">
+          <a class="main__back_link" href="index.html"><- Назад</a>
+        </div>
+        <div class="main__flat">
+          <section class="main__flat_content">
+            <div class="flat__images info__block" data-slider="flat">
+              <div class="flat__images_slider">
+                <div data-go="back">
+                  <img src="images/arrow-right-big.png" alt="arrow">
+                </div>
+                <div class="flat__images_main image__wrapper"></div>
+                <div data-go="next">
+                  <img src="images/arrow-right-big.png" alt="arrow">
+                </div>
+              </div>
+              <div class="flat__images_list"></div>
+            </div>
+            <aside class="main__flat_sidebar info__block">
+              <div class="sidebar__info"></div>
+              <div class="hr"></div>
+              <div class="sidebar__contact"></div>
+            </aside>
+            <div class="flat__params info__block">
+              <div class="flat__params_block">
+                <h3 class="flat__params_title info__block_title">О квартире</h3>
+                <div class="flat__params_list flat__params_flat"></div>
+              </div>
+              <div class="flat__params_block">
+                <h3 class="flat__params_title info__block_title">О доме</h3>
+                <div class="flat__params_list flat__params_building"></div>
+              </div>
+            </div>
+            <div class="flat__description info__block">
+              <div class="flat__description_accordion accordion" data-accordion
+                data-opened="0">
+                <h3
+                  class="flat__params_title info__block_title accordion__title">Описание</h3>
+                <p class="flat__description_text accordion__text">
+                  Арендатор не оплачивает комиссию! Первое заселение! Сдаётся в
+                  аренду на длительный срок современная квартира с панорамным
+                  видом на парк!
+                </p>
+                <div class="flat__description_toggle accordion__button">
+                  <span>Развернуть</span>
+                  <svg class="accordion__button_arrow" width="18" height="9"
+                    viewBox="0 0 18 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.73023 0L8.65116 5.54446L15.5721 0L17.3023 1.19661L8.65116 8.10345L0 1.19661L1.73023 0Z"
+                      fill="#FF9500" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flat__location info__block">
+              <h3
+                class="flat__params_title info__block_title">Местоположение</h3>
+              <div class="flat__location_map">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e70ce596f81d6ce76607fc8885ba5c0411cea56bdd274eecb1831a7ed7fe75a&amp;source=constructor"
+                  width="895" height="509" frameborder="0"></iframe>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <div class="main__back">
-        <a class="main__back_link" href="index.html"><- Назад</a>
-      </div>
-      <div class="main__flat">
-        <section class="main__flat_content">
-          <div class="flat__images info__block" data-slider="flat">
-            <div class="flat__images_slider">
-              <div data-go="back">
-                <img src="images/arrow-right-big.png" alt="arrow">
-              </div>
-              <div class="flat__images_main image__wrapper"></div>
-              <div data-go="next">
-                <img src="images/arrow-right-big.png" alt="arrow">
-              </div>
-            </div>
-            <div class="flat__images_list"></div>
-          </div>
-          <aside class="main__flat_sidebar info__block">
-            <div class="sidebar__info"></div>
-            <div class="hr"></div>
-            <div class="sidebar__contact"></div>
-          </aside>
-          <div class="flat__params info__block">
-            <div class="flat__params_block">
-              <h3 class="flat__params_title info__block_title">О квартире</h3>
-              <div class="flat__params_list flat__params_flat"></div>
-            </div>
-            <div class="flat__params_block">
-              <h3 class="flat__params_title info__block_title">О доме</h3>
-              <div class="flat__params_list flat__params_building"></div>
-            </div>
-          </div>
-          <div class="flat__description info__block">
-            <div class="flat__description_accordion accordion" data-accordion data-opened="0">
-              <h3 class="flat__params_title info__block_title accordion__title">Описание</h3>
-              <p class="flat__description_text accordion__text">
-                Арендатор не оплачивает комиссию! Первое заселение! Сдаётся в аренду на длительный срок современная квартира с панорамным видом на парк!
-              </p>
-              <div class="flat__description_toggle accordion__button">
-                <span>Развернуть</span>
-                <svg class="accordion__button_arrow" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.73023 0L8.65116 5.54446L15.5721 0L17.3023 1.19661L8.65116 8.10345L0 1.19661L1.73023 0Z" fill="#FF9500"/>
+    </main>
+    <footer id="contacts">
+      <div class="container">
+        <div class="footer">
+          <h3 class="footer__title">Контакты:</h3>
+          <div class="footer__contacts">
+            <div class="footer__contacts_phones">
+              <div class="footer__phones_item contact__item">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z"
+                    fill="#FF9500" />
                 </svg>
+                <a class="contacts__text" href="tel:+375291111111">+375 (29)
+                  111-11-11</a>
+              </div>
+              <div class="footer__phones_item contact__item">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z"
+                    fill="#FF9500" />
+                </svg>
+                <a class="contacts__text" href="tel:+375291111111">+375 (29)
+                  111-11-11</a>
+              </div>
+            </div>
+            <div class="footer__contacts_location">
+              <div class="contact__item">
+                <svg width="27" height="34" viewBox="0 0 27 34" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.5 0.127441C6.03643 0.127441 0 5.29194 0 11.6774C0 20.3399 13.5 33.1274 13.5 33.1274C13.5 33.1274 27 20.3399 27 11.6774C27 5.29194 20.9636 0.127441 13.5 0.127441ZM3.85714 11.6774C3.85714 7.12344 8.17714 3.42744 13.5 3.42744C18.8229 3.42744 23.1429 7.12344 23.1429 11.6774C23.1429 16.4294 17.5886 23.5409 13.5 27.9794C9.48857 23.5739 3.85714 16.3799 3.85714 11.6774Z"
+                    fill="#FF9500" />
+                  <path
+                    d="M13.5 16.1274C15.9853 16.1274 18 13.8889 18 11.1274C18 8.36602 15.9853 6.12744 13.5 6.12744C11.0147 6.12744 9 8.36602 9 11.1274C9 13.8889 11.0147 16.1274 13.5 16.1274Z"
+                    fill="#FF9500" />
+                </svg>
+                <a class="contacts__text"
+                  href="https://yandex.by/maps/157/minsk/house/Zk4Ycw5kT0cHQFtpfXVwdnlmbQ==/?ll=27.596422%2C53.918196&z=18"
+                  target="_blank">г.Минск, ул. Петруся Бровки 6, корп.1</a>
               </div>
             </div>
           </div>
-          <div class="flat__location info__block">
-            <h3 class="flat__params_title info__block_title">Местоположение</h3>
-            <div class="flat__location_map">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e70ce596f81d6ce76607fc8885ba5c0411cea56bdd274eecb1831a7ed7fe75a&amp;source=constructor" width="895" height="509" frameborder="0"></iframe>
-            </div>
+          <h5 class="footer__description">
+            Оказание услуг ООО «Живи тут»,УНП 111111111
+            <br />
+            Свидетельство о регистрации №1111111 выданное 11 ноября 1111 г.
+            Минским городским исполнительным комитетом
+            <br />
+            111111, г. Минск, ул. Минская 11. Время работы 9:00-18:00 (сб, вс –
+            выходной)
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <div class="nav__modal modal">
+      <div class="nav__modal_content modal__content">
+        <nav class="nav__modal_list">
+          <a href="index.html#catalog" class="nav__modal_item">Каталог</a>
+          <a href="index.html#about" class="nav__modal_item">О нас</a>
+          <a href="index.html#contacts" class="nav__modal_item">Контакты</a>
+          <div class="nav__modal_closer modal__closer">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                fill="black" />
+            </svg>
           </div>
-        </section>
+        </nav>
       </div>
     </div>
-  </main>
-  <footer id="contacts">
-    <div class="container">
-      <div class="footer">
-        <h3 class="footer__title">Контакты:</h3>
-        <div class="footer__contacts">
-          <div class="footer__contacts_phones">
-            <div class="footer__phones_item contact__item">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z" fill="#FF9500"/>
-              </svg>
-              <a class="contacts__text" href="tel:+375291111111">+375 (29) 111-11-11</a>
-            </div>
-            <div class="footer__phones_item contact__item">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 3.33333C6 4.81667 6.25 6.26667 6.65 7.65L4.65 9.65C3.96667 7.65 3.53333 5.53333 3.38333 3.33333H5.9ZM22.3333 23.3667C23.75 23.7667 25.2 24.0167 26.6667 24.1167V26.6C24.4667 26.45 22.35 26.0167 20.3333 25.35L22.3333 23.3667ZM7.5 0H1.66667C0.75 0 0 0.75 0 1.66667C0 17.3167 12.6833 30 28.3333 30C29.25 30 30 29.25 30 28.3333V22.5167C30 21.6 29.25 20.85 28.3333 20.85C26.2667 20.85 24.25 20.5167 22.3833 19.9C22.2167 19.8333 22.0333 19.8167 21.8667 19.8167C21.4333 19.8167 21.0167 19.9833 20.6833 20.3L17.0167 23.9667C12.3 21.55 8.43333 17.7 6.03333 12.9833L9.7 9.31667C10.1667 8.85 10.3 8.2 10.1167 7.61667C9.5 5.75 9.16667 3.75 9.16667 1.66667C9.16667 0.75 8.41667 0 7.5 0Z" fill="#FF9500"/>
-              </svg>
-              <a class="contacts__text" href="tel:+375291111111">+375 (29) 111-11-11</a>
-            </div>
-          </div>
-          <div class="footer__contacts_location">
-            <div class="contact__item">
-              <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.5 0.127441C6.03643 0.127441 0 5.29194 0 11.6774C0 20.3399 13.5 33.1274 13.5 33.1274C13.5 33.1274 27 20.3399 27 11.6774C27 5.29194 20.9636 0.127441 13.5 0.127441ZM3.85714 11.6774C3.85714 7.12344 8.17714 3.42744 13.5 3.42744C18.8229 3.42744 23.1429 7.12344 23.1429 11.6774C23.1429 16.4294 17.5886 23.5409 13.5 27.9794C9.48857 23.5739 3.85714 16.3799 3.85714 11.6774Z" fill="#FF9500"/>
-                <path d="M13.5 16.1274C15.9853 16.1274 18 13.8889 18 11.1274C18 8.36602 15.9853 6.12744 13.5 6.12744C11.0147 6.12744 9 8.36602 9 11.1274C9 13.8889 11.0147 16.1274 13.5 16.1274Z" fill="#FF9500" />
-              </svg>
-              <a class="contacts__text" href="https://yandex.by/maps/157/minsk/house/Zk4Ycw5kT0cHQFtpfXVwdnlmbQ==/?ll=27.596422%2C53.918196&z=18" target="_blank">г.Минск, ул. Петруся Бровки 6, корп.1</a>            </div>
-          </div>
-        </div>
-        <h5 class="footer__description">
-          Оказание услуг ООО «Живи тут»,УНП 111111111
-          <br />
-          Свидетельство о регистрации №1111111 выданное 11 ноября 1111 г. Минским городским исполнительным комитетом
-          <br />
-          111111, г. Минск, ул. Минская 11. Время работы 9:00-18:00 (сб, вс – выходной)
-        </h5>
-      </div>
-    </div>
-  </footer>
-  <div class="nav__modal modal">
-    <div class="nav__modal_content modal__content">
-      <nav class="nav__modal_list">
-        <a href="index.html#catalog" class="nav__modal_item">Каталог</a>
-        <a href="index.html#about" class="nav__modal_item">О нас</a>
-        <a href="index.html#contacts" class="nav__modal_item">Контакты</a>
-        <div class="nav__modal_closer modal__closer">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black"/>
-          </svg>
-        </div>
-      </nav>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
